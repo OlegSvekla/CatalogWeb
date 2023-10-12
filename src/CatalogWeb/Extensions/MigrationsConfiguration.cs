@@ -18,7 +18,10 @@ namespace CatalogWeb.Extensions
                 {
                     var context = serviceProvider.GetRequiredService<CatalogWebDbContext>();
                     context.Database.Migrate();
+
                     await CatalogWebDbContextSeed.SeedAsyncData(context, logger);
+
+                    logger.LogInformation("The database has been successfully created and filled with initial data.");
                 }
                 catch (Exception ex)
                 {
