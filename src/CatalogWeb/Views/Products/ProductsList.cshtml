@@ -1,0 +1,24 @@
+﻿@using CatalogWeb.Domain.Entities;
+@model IEnumerable<Product>
+
+<h2>Products List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="product-name">Product Name</th>
+            <th class="product-category">Category</th>
+            <th class="product-price">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td class="product-name">@product.Name</td>
+                <td class="category-@product.CategoryId">@product.Category.Name</td>
+                <td class="product-price">@product.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

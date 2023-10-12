@@ -20,3 +20,35 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-category {
+    font-style: italic;
+}
+
+.product-price {
+    font-size: 18px;
+}
+
+.category-1 {
+    color: pink;
+}
+
+.category-2 {
+    color: blue;
+}
+
+.category-3 {
+    color: green;
+}
+
+.category-4 {
+    color: red;
+}
+
+.category-5 {
+    color: lightseagreen;
+}
