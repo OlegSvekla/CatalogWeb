@@ -1,11 +1,11 @@
-﻿using CatalogWeb.Domain;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CatalogWeb.Domain.Entities;
 
 namespace CatalogWeb.Infrastructure.EntitesConfiguration
 {
@@ -17,7 +17,6 @@ namespace CatalogWeb.Infrastructure.EntitesConfiguration
 
             builder.Property(p => p.Name).IsRequired().HasMaxLength(255);
 
-            // Устанавливаем точность и масштаб для свойства Price
             builder.Property(p => p.Price)
                 .IsRequired()
                 .HasPrecision(18, 2);
