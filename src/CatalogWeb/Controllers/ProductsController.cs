@@ -24,9 +24,7 @@ namespace CatalogWeb.Controllers
         {
             var productsWithCategories = await _productService.GetAllProductsAsync(cancellationToken);
 
-            return productsWithCategories == 
-                null ? NotFound("Data is empty") :
-                       View("ProductsList", productsWithCategories);
+            return View("ProductsList", productsWithCategories);
         }
     }
 }

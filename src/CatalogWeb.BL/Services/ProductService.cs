@@ -2,6 +2,7 @@
 using CatalogWeb.Domain.IService;
 using CatalogWeb.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +25,6 @@ namespace CatalogWeb.BL.Services
             var listOfProducts = await _context.Products
                 .Include(p => p.Category)
                 .ToListAsync(cancellationToken);
-
-            if(listOfProducts is null) 
-            {
-                return null;
-            }
 
             return listOfProducts;
         }
